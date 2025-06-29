@@ -5,15 +5,17 @@ import { CredtCardAppPage } from "../../pages/CreditCard/CredtCardAppPage";
 import { TrackingApplicationStatus } from "../../pages/TrackingPage/TrackApplicationStatus";
 import { DebitCardAppPage } from "../../pages/DebitCard/DebitCardAppPage";
 import { CommonLibrary } from "../../utils/CommonLibrary";
-import dotenv from 'dotenv'
-//import "../../utils/hooks";
-dotenv.config({path:`Environment/.env.sit`})
-test('Login',async({page})=>{
+//import dotenv from 'dotenv'
+import "../../utils/hooks";
+
+//dotenv.config({path:`Environment/.env.sit`})
+
+/*test('Login',async({page})=>{
    const url=process.env.SIT as string
    await page.goto(url)
    const loginPage=new LoginPage(page);
    await loginPage.login("SenthilSmartQAHub","demo")
-})
+})*/
  
 
 test('Apply credit Card',async({page})=>{

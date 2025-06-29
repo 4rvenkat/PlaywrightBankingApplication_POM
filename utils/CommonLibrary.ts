@@ -68,7 +68,12 @@ async storageState(storagePath:string)
     await this.page.context().storageState({path:storagePath})
 
 }
+async waitAndClick(element:Locator){
+ 
+  await element.waitFor({state:"visible"})
+  await element.click();
 
+}
 
 
 }
