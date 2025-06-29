@@ -1,0 +1,62 @@
+{
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.1.2082312808.1751213632",
+      "domain": ".playwrightautomationtesting.blogspot.com",
+      "path": "/",
+      "expires": 1785773632.39194,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "IDE",
+      "value": "AHWqTUkTQzN4gTrusdeAzXB2x_XUrfdWudboNyAH3VABt_718pgmU8EuzWVGLoSO6fI",
+      "domain": ".doubleclick.net",
+      "path": "/",
+      "expires": 1785775634.200096,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga_11XN7VRVP3",
+      "value": "GS2.1.s1751213632$o1$g1$t1751215664$j29$l0$h0",
+      "domain": ".playwrightautomationtesting.blogspot.com",
+      "path": "/",
+      "expires": 1785775664.074627,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://playwrightautomationtesting.blogspot.com",
+      "localStorage": [
+        {
+          "name": "userRole",
+          "value": "SenthilSmartQAHub"
+        },
+        {
+          "name": "loggedIn",
+          "value": "true"
+        }
+      ]
+    },
+    {
+      "origin": "https://www.google.com",
+      "localStorage": [
+        {
+          "name": "rc::h",
+          "value": "1751215659475"
+        },
+        {
+          "name": "rc::a",
+          "value": "MXZ4MTRudTJ4eHA3dA=="
+        }
+      ]
+    }
+  ]
+}

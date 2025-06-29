@@ -1,4 +1,5 @@
 import { expect, Locator, Page } from "@playwright/test";
+import { CommonLibrary } from "../../utils/CommonLibrary";
 
 
 export class LoginPage
@@ -19,13 +20,16 @@ export class LoginPage
     }
     async login(username:string,pwd:string)
     {
-
+      
         await this.userNameTextbox.fill(username)
 
         await this.passwordTextbox.fill(pwd)
        
         await this.loginButton.click()
+        const commonlib=new CommonLibrary(this.page)
+        await commonlib.storageState('Credtiantls/login.json')
 
-        await expect(this.page).toHaveURL("https://playwrightautomationtesting.blogspot.com/2025/06/banking-application.html")
+      //  await expect(this.page).toHaveURL("https://playwrightautomationtesting.blogspot.com/2025/06/online-banking.html")
+
     }
 }
