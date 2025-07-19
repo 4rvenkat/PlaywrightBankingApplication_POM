@@ -22,10 +22,10 @@
     },
     {
       "name": "_ga_11XN7VRVP3",
-      "value": "GS2.1.s1752932015$o2$g1$t1752932336$j50$l0$h0",
+      "value": "GS2.1.s1752935311$o3$g1$t1752936400$j57$l0$h0",
       "domain": ".playwrightautomationtesting.blogspot.com",
       "path": "/",
-      "expires": 1787492336.607433,
+      "expires": 1787496400.477963,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -50,7 +50,7 @@
       "localStorage": [
         {
           "name": "rc::h",
-          "value": "1752932329825"
+          "value": "1752936393622"
         },
         {
           "name": "rc::a",
