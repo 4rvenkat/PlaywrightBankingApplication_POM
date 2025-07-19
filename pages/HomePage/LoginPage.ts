@@ -26,8 +26,7 @@ export class LoginPage
         await this.passwordTextbox.fill(pwd)
        
         await this.loginButton.click()
-        const commonlib=new CommonLibrary(this.page)
-        await commonlib.storageState('Credtiantls/login.json')
+            //  await commonlib.storageState('Credtiantls/login.json')
 
       //  await expect(this.page).toHaveURL("https://playwrightautomationtesting.blogspot.com/2025/06/online-banking.html")
 

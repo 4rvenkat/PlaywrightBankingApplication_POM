@@ -5,11 +5,15 @@ import dotenv from 'dotenv'
 
 dotenv.config({path:`Environment/.env.sit`})
 
-test.beforeAll(async()=>{
+test.beforeEach(async({page})=>{
     const url=process.env.SIT as string
-   await this.page.goto(url)
-   const loginPage=new LoginPage(page);
-   await loginPage.login("SenthilSmartQAHub","demo")
+   await page.goto(url)
+
+})
+
+test.afterEach(async({page})=>{
+
+   await page.context().close();
 
 })
 

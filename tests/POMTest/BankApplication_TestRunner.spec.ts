@@ -19,15 +19,10 @@ import "../../utils/hooks";
  
 
 test('Apply credit Card',async({page})=>{
-
-
-  // const loginPage=new LoginPage(page);
-  
+ 
    const homePage=new HomePage(page);
    const credtCardApp=new CredtCardAppPage(page)
    const commonlib=new CommonLibrary(page)
-   await page.goto("https://playwrightautomationtesting.blogspot.com/2025/06/banking-application.html")
- //  await loginPage.login("CreditUser","demo")
    await homePage.navigateToCreditCardApplicationForm()
    await credtCardApp.fillCreditCardApplication();
    await page.waitForTimeout(10000)
@@ -47,12 +42,10 @@ test('Apply credit Card',async({page})=>{
 test('Apply Debit Card',async({page})=>{
 
 
- //   const loginPage=new LoginPage(page);
+
     const homePage=new HomePage(page);
     const debitCardApp=new DebitCardAppPage(page)
     const commonlib=new CommonLibrary(page)
-    await page.goto("https://playwrightautomationtesting.blogspot.com/2025/06/banking-application.html")
- //   await loginPage.login("DebitUser","demo")
     await homePage.navigateToDebicreditCardApplicationForm()
     await debitCardApp.fillDebitCardAppForm();
     await debitCardApp.findDebitCardTrackingnumber()
