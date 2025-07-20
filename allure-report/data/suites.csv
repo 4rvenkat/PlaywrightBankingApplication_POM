@@ -1,2 +1,2 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","4347","Online login","chromium","Sat Jul 19 09:46:36 CDT 2025","passed","Sat Jul 19 09:46:40 CDT 2025","","POMTest\Login.spec.ts","",""
+"","6577","Online login","chromium","Sun Jul 20 07:40:03 CDT 2025","passed","Sun Jul 20 07:40:10 CDT 2025","","POMTest\Login.spec.ts","",""

@@ -12,20 +12,20 @@
     },
     {
       "name": "IDE",
-      "value": "AHWqTUn2bAH1i8cPDdCsowcyg_UI8SLJYUnbGX4y5671RuFE99qOvufMcIoDymcMzDI",
+      "value": "AHWqTUl7EMGc2_X1e4JPTO1WneXfd2Lo1pIaTmkQXowxSNN7rfJyiRI5JblGw2y-KX8",
       "domain": ".doubleclick.net",
       "path": "/",
-      "expires": 1787492015.505606,
+      "expires": 1787575208.087346,
       "httpOnly": true,
       "secure": true,
       "sameSite": "None"
     },
     {
       "name": "_ga_11XN7VRVP3",
-      "value": "GS2.1.s1752935311$o3$g1$t1752936400$j57$l0$h0",
+      "value": "GS2.1.s1753015207$o4$g0$t1753015211$j56$l0$h0",
       "domain": ".playwrightautomationtesting.blogspot.com",
       "path": "/",
-      "expires": 1787496400.477963,
+      "expires": 1787575211.363838,
       "httpOnly": false,
       "secure": false,
       "sameSite": "Lax"
@@ -50,7 +50,7 @@
       "localStorage": [
         {
           "name": "rc::h",
-          "value": "1752936393622"
+          "value": "1753015210063"
         },
         {
           "name": "rc::a",
