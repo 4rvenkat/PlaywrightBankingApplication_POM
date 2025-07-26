@@ -5,7 +5,7 @@ import { CredtCardAppPage } from "../CreditCard/CredtCardAppPage";
 import { DebitCardAppPage } from "../DebitCard/DebitCardAppPage";
 
 
-export class TrackingApplicationStatus
+export class TrackingApplicationStatusPage
 {
     page:Page
     private readonly trackingNoTextBox:Locator
@@ -31,8 +31,8 @@ export class TrackingApplicationStatus
    }
 
    async verifyCreditCardApplicationStatus(){
-    TrackingApplicationStatus.trackingStatus =await this.checkTrackingNumber.textContent()??''
-    expect(TrackingApplicationStatus.trackingStatus).toBe(`Status for ${CredtCardAppPage.creditTrackingNumber}: In Progress`)
+    TrackingApplicationStatusPage.trackingStatus =await this.checkTrackingNumber.textContent()??''
+    expect(TrackingApplicationStatusPage.trackingStatus).toBe(`Status for ${CredtCardAppPage.creditTrackingNumber}: In Progress`)
 
 
    }
@@ -44,8 +44,8 @@ export class TrackingApplicationStatus
    }
 
    async verifyDebitCardApplicationStatus(){
-    TrackingApplicationStatus.trackingStatus =await this.checkTrackingNumber.textContent()??''
-    expect(TrackingApplicationStatus.trackingStatus).toBe(`Status for ${DebitCardAppPage.debitCrdTrackingNumber}: In Progress`)
+    TrackingApplicationStatusPage.trackingStatus =await this.checkTrackingNumber.textContent()??''
+    expect(TrackingApplicationStatusPage.trackingStatus).toBe(`Status for ${DebitCardAppPage.debitCrdTrackingNumber}: In Progress`)
 
    }
 

@@ -9,6 +9,7 @@ export class HomePage
     private trackStatusClickButton:Locator
     private homePagebutton:Locator
     private readonly goBackButton:Locator
+    private logOut:Locator
     
     constructor(page:Page)
     {
@@ -18,6 +19,7 @@ export class HomePage
      this.trackStatusClickButton= page.locator("//a[contains(text(),'Track Application Status')]")
      this.goBackButton=page.locator("//a[@class='back-button']")
      this.homePagebutton=page.locator("//a[@class='home-button']")
+     this.logOut=page.locator("//button[text()='Logout']")
 
 
     }
@@ -43,6 +45,8 @@ export class HomePage
          
         await this.homePagebutton.click();
 
-
   }
+    async clickLogOut(){
+        await this.logOut.click()
+    }
 }

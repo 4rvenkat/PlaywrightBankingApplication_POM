@@ -1,0 +1,1 @@
+[{"uid":"322dfb80eae032f3","name":"Apply credit Card","time":{"start":1753542131151,"stop":1753542148479,"duration":17328},"status":"passed","severity":"normal"},{"uid":"bcf47ebaf54f234","name":"Apply Debit Card","time":{"start":1753542148760,"stop":1753542155748,"duration":6988},"status":"passed","severity":"normal"}]

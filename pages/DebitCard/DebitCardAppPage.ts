@@ -1,12 +1,14 @@
 
 import { expect, Locator, Page, Selectors } from "@playwright/test";
+import { CommonPlaywrightLib } from "../../Utils/CommonPlaywrightLib";
 
 
 export class DebitCardAppPage
 {
     page:Page 
     private readonly fullnameTextBox:Locator
-    private readonly genderOptionBox:Locator
+    private readonly genderMaleOptionBox:Locator
+    private readonly genderFemaleOptionBox:Locator
     private readonly currentCityTextBox:Locator
     private readonly accountNoTextBox:Locator
     private readonly cardTypeTextBox:Locator
@@ -21,7 +23,8 @@ export class DebitCardAppPage
     {
      this.page=page
      this.fullnameTextBox= page.locator("#name")
-     this.genderOptionBox= page.locator("//input[@value='Male']")
+     this.genderMaleOptionBox= page.locator("//input[@value='Male']")
+     this.genderFemaleOptionBox= page.locator("//input[@value='Female']")
      this.currentCityTextBox= page.getByPlaceholder("Enter your city")
      this.accountNoTextBox= page.locator("#accountNumber")
      this.cardTypeTextBox= page.locator('#cardType');
@@ -30,22 +33,33 @@ export class DebitCardAppPage
      this.debitCrdTrackingNumText=page.locator("#trackingLink").last()
      this.confirmationCheckBox=page.locator("#confirmation")
     
-
-
     }
     async fillDebitCardAppForm()
     {
-    
-        await this.fullnameTextBox.fill("Arun")
-        await this.genderOptionBox.check()
-        await this.currentCityTextBox.fill("Chennai ")
-        await this.accountNoTextBox.fill("12345678901234")
-        await this.cardTypeTextBox.selectOption('Platinum');
-        this.page.on("dialog", async(dialogobj)=>
-            {
-              await this.page.waitForTimeout(5000)
-             dialogobj.accept()
-            })
+   const commonplaywrightlib=new CommonPlaywrightLib(this.page)
+   const csvdata= await commonplaywrightlib.readingValueFromCSV('inputdata/DebitCarddata.csv')
+   await this.fullnameTextBox.fill(csvdata[0].fullName)
+
+     if(csvdata[0].gender=='Male'){
+        await this.genderMaleOptionBox.check()
+     }
+     else(csvdata[0].gender=='Female')
+     {
+        await this.genderFemaleOptionBox.check()
+     }
+       
+     await this.currentCityTextBox.fill(csvdata[0].city)
+        await this.accountNoTextBox.fill(csvdata[0].accountNumber)
+
+       await commonplaywrightlib.selectByLabel(this.cardTypeTextBox,csvdata[0].cardType)
+
+       //await this.cardTypeTextBox.selectOption("Classic")
+         commonplaywrightlib.acceptAlert("ok","confirm")
+        // this.page.on("dialog", async(dialogobj)=>
+        //     {
+        //       await this.page.waitForTimeout(5000)
+        //      dialogobj.accept()
+        //     })
         await this.confirmationCheckBox.click();
         await this.applyforDebitClickButton.click();
         const successMessage=await this.successMessage.textContent();

@@ -37,7 +37,8 @@ export class CredtCardAppPage
     async fillCreditCardApplication()
     {
     
-        await this.nameTextBox.fill("Arun")
+       await this.nameTextBox.fill("Arun")
+       
         await this.mailTextBox.fill("Arun@gmail.com")
         await this.phoneTextBox.fill("1234568900")
         await this.addressTextBox.fill("18001 Richmond place drive")

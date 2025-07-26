@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","17328","Apply credit Card","chromium","Sat Jul 26 11:02:11 EDT 2025","passed","Sat Jul 26 11:02:28 EDT 2025","","POMTest\BankApplication_TestRunner.spec.ts","",""
+"","6988","Apply Debit Card","chromium","Sat Jul 26 11:02:28 EDT 2025","passed","Sat Jul 26 11:02:35 EDT 2025","","POMTest\BankApplication_TestRunner.spec.ts","",""
