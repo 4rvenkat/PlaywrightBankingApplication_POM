@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 [{"uid":"bcf47ebaf54f234","name":"Apply Debit Card","time":{"start":1753542148760,"stop":1753542155748,"duration":6988},"status":"passed","severity":"normal"},{"uid":"322dfb80eae032f3","name":"Apply credit Card","time":{"start":1753542131151,"stop":1753542148479,"duration":17328},"status":"passed","severity":"normal"}]
+=======
+[{"uid":"3cfbaa216bc9560","name":"Online login","time":{"start":1753015203844,"stop":1753015210421,"duration":6577},"status":"passed","severity":"normal"}]
+>>>>>>> e6d0f0d78b2d6f77dfc845a3a8c731d9fbe38ac5

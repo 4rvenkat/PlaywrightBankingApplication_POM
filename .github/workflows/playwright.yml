@@ -1,12 +1,23 @@
+<<<<<<< HEAD
 name: Playwright Tests
+=======
+name: BankingApplication
+>>>>>>> e6d0f0d78b2d6f77dfc845a3a8c731d9fbe38ac5
 
 on:
   push:
     branches: [ main, master ]
+<<<<<<< HEAD
   pull_request:
     branches: [ main, master ]
 # schedule:
  # - cron: '*/5 * * * *' # every 5 minutes
+=======
+
+# schedule:
+ # - cron: '*/5 * * * *' # every 5 minutes
+ 
+>>>>>>> e6d0f0d78b2d6f77dfc845a3a8c731d9fbe38ac5
 
 jobs:
   test:
@@ -27,8 +38,18 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install --with-deps
 
+<<<<<<< HEAD
       - name: Run Playwright Tests
         run: npx playwright test --reporter=line,allure-playwright
+=======
+        # ✅ Step 1: Run only login test first
+      - name: Run Login Test
+        run: npx playwright test tests/POMTest/Login.spec.ts --reporter=line,allure-playwright
+
+        # ✅ Step 2: Run all other tests except login
+      - name: Run Remaining Tests (excluding login)
+        run: npx playwright test --grep-invert login --reporter=line,allure-playwright
+>>>>>>> e6d0f0d78b2d6f77dfc845a3a8c731d9fbe38ac5
 
       - name: Install Allure CLI
         run: npm install -g allure-commandline --save-dev

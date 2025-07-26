@@ -1,4 +1,5 @@
 import { expect, Locator, Page, Selectors } from "@playwright/test";
+import { CommonLibrary } from "../../utils/CommonLibrary";
 
 
 export class CredtCardAppPage
@@ -36,6 +37,7 @@ export class CredtCardAppPage
     }
     async fillCreditCardApplication()
     {
+<<<<<<< HEAD
     
        await this.nameTextBox.fill("Arun")
        
@@ -44,6 +46,16 @@ export class CredtCardAppPage
         await this.addressTextBox.fill("18001 Richmond place drive")
         await this.accountNoTextBox.fill("12345678901234")
         await this.cardTypeTextBox.selectOption('Platinum');
+=======
+    const commonlib=new CommonLibrary(this.page)
+    const csvData=await commonlib.readingValueFromCSV('testdata/CredtiCardData.csv')
+        await this.nameTextBox.fill(csvData[0].Fullname)
+        await this.mailTextBox.fill(csvData[0].mail)
+        await this.phoneTextBox.fill(csvData[0].phone)
+        await this.addressTextBox.fill(csvData[0].address)
+        await this.accountNoTextBox.fill(csvData[0].AccountNum)
+        await commonlib.selectByLabel(this.cardTypeTextBox,csvData[0].CardType)
+>>>>>>> e6d0f0d78b2d6f77dfc845a3a8c731d9fbe38ac5
         await this.proofTextBox.setInputFiles(("testdata/Vitality-Protect-Advance-Brochure.pdf"))
         await this.applyforDebitClickButton.click();
         const successMessage=await this.successMessage.textContent();
