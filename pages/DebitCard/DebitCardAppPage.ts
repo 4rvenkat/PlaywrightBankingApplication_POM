@@ -1,10 +1,6 @@
 
 import { expect, Locator, Page, Selectors } from "@playwright/test";
-<<<<<<< HEAD
 import { CommonPlaywrightLib } from "../../Utils/CommonPlaywrightLib";
-=======
-import { CommonLibrary } from "../../utils/CommonLibrary";
->>>>>>> e6d0f0d78b2d6f77dfc845a3a8c731d9fbe38ac5
 
 
 export class DebitCardAppPage
@@ -37,13 +33,13 @@ export class DebitCardAppPage
      this.debitCrdTrackingNumText=page.locator("#trackingLink").last()
      this.confirmationCheckBox=page.locator("#confirmation")
     
-<<<<<<< HEAD
     }
     async fillDebitCardAppForm()
     {
    const commonplaywrightlib=new CommonPlaywrightLib(this.page)
    const csvdata= await commonplaywrightlib.readingValueFromCSV('inputdata/DebitCarddata.csv')
    await this.fullnameTextBox.fill(csvdata[0].fullName)
+   //  csvData.Gender=='Male'?await this.genderMaleOptionBox.check():await this.genderFemaleOptionBox.check()
 
      if(csvdata[0].gender=='Male'){
         await this.genderMaleOptionBox.check()
@@ -65,27 +61,6 @@ export class DebitCardAppPage
         //       await this.page.waitForTimeout(5000)
         //      dialogobj.accept()
         //     })
-=======
-
-    }
-    async fillDebitCardAppForm()
-    {
-     const commonlib=new CommonLibrary(this.page)
-       const csvData= await commonlib.readingValueFromCSV('testdata/DebitCardData.csv')
-        await this.fullnameTextBox.fill(csvData[0].Fullname)
-        csvData.Gender=='Male'?await this.genderMaleOptionBox.check():await this.genderFemaleOptionBox.check()
-       
-        await this.currentCityTextBox.fill(csvData[0].City)
-        await this.accountNoTextBox.fill(csvData[0].AccountNum)
-        await commonlib.selectByLabel(this.cardTypeTextBox,csvData[0].CardType)
-    //    await this.cardTypeTextBox.selectOption('Platinum');
-     /*   this.page.on("dialog", async(dialogobj)=>
-            {
-              await this.page.waitForTimeout(5000)
-             dialogobj.accept()
-            })*/
-         await commonlib.acceptAlert("ok","confirm") 
->>>>>>> e6d0f0d78b2d6f77dfc845a3a8c731d9fbe38ac5
         await this.confirmationCheckBox.click();
         await this.applyforDebitClickButton.click();
         const successMessage=await this.successMessage.textContent();

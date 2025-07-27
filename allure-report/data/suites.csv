@@ -1,7 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-<<<<<<< HEAD
-"","17328","Apply credit Card","chromium","Sat Jul 26 11:02:11 EDT 2025","passed","Sat Jul 26 11:02:28 EDT 2025","","POMTest\BankApplication_TestRunner.spec.ts","",""
-"","6988","Apply Debit Card","chromium","Sat Jul 26 11:02:28 EDT 2025","passed","Sat Jul 26 11:02:35 EDT 2025","","POMTest\BankApplication_TestRunner.spec.ts","",""
-=======
-"","6577","Online login","chromium","Sun Jul 20 07:40:03 CDT 2025","passed","Sun Jul 20 07:40:10 CDT 2025","","POMTest\Login.spec.ts","",""
->>>>>>> e6d0f0d78b2d6f77dfc845a3a8c731d9fbe38ac5
+"","19030","Apply credit Card","chromium","Sat Jul 26 21:55:57 EDT 2025","passed","Sat Jul 26 21:56:16 EDT 2025","","POMTest\BankApplication_TestRunner.spec.ts","",""
+"","8375","Apply Debit Card","chromium","Sat Jul 26 21:56:16 EDT 2025","passed","Sat Jul 26 21:56:25 EDT 2025","","POMTest\BankApplication_TestRunner.spec.ts","",""
+"","6577","Online login","chromium","Sun Jul 20 08:40:03 EDT 2025","passed","Sun Jul 20 08:40:10 EDT 2025","","POMTest\Login.spec.ts","",""

@@ -31,7 +31,7 @@ test('Online login', async({page})=>{
     }
     
 }
-   await commonLibrary.storageState('Credtiantls/login.json')
+   await commonLibrary.storageState('credential/loginCredential.json')
 
  
 
